@@ -1,0 +1,39 @@
+﻿<Window x:Class="Scala.Oefening03.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Scala.Oefening03.Wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <GroupBox x:Name="grpOnzeVloot" Header="Onze vloot" HorizontalAlignment="Left" Height="414" Margin="10,0,0,0" VerticalAlignment="Center" Width="277">
+            <Grid>
+                <Button x:Name="btnNew" Content="Nieuw" HorizontalAlignment="Left" Height="28" Margin="10,10,0,0" VerticalAlignment="Top" Width="68" Click="btnNew_Click"/>
+                <Button x:Name="btnEdit" Content="Wijzig" HorizontalAlignment="Left" Height="28" Margin="83,10,0,0" VerticalAlignment="Top" Width="68" Click="btnEdit_Click"/>
+                <Button x:Name="btnDelete" Content="Wissen" HorizontalAlignment="Left" Height="28" Margin="156,10,0,0" VerticalAlignment="Top" Width="68" Click="btnDelete_Click"/>
+                <ListBox x:Name="lstVloot" HorizontalAlignment="Center" Height="326" Margin="0,55,0,0" VerticalAlignment="Top" Width="245" SelectionChanged="lstVloot_SelectionChanged" />
+
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="grpDetails" Header="Detailgegevens" HorizontalAlignment="Left" Height="414" Margin="303,0,0,0" VerticalAlignment="Center" Width="473">
+            <Grid>
+                <Button x:Name="btnSave" Content="Bewaren" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="33" Width="75" Click="btnSave_Click"/>
+                <Button x:Name="btnCancel" Content="Annuleren" HorizontalAlignment="Left" Margin="100,10,0,0" VerticalAlignment="Top" Height="33" Width="75" Click="btnCancel_Click"/>
+                <Label Content="Merk : " HorizontalAlignment="Left" Height="29" Margin="10,67,0,0" VerticalAlignment="Top" Width="105"/>
+                <Label Content="Serie : " HorizontalAlignment="Left" Height="29" Margin="10,101,0,0" VerticalAlignment="Top" Width="105"/>
+                <Label Content="Kleur : " HorizontalAlignment="Left" Height="29" Margin="10,135,0,0" VerticalAlignment="Top" Width="105"/>
+                <Label Content="KW : " HorizontalAlignment="Left" Height="29" Margin="10,169,0,0" VerticalAlignment="Top" Width="105"/>
+                <Label Content="In dienst : " HorizontalAlignment="Left" Height="29" Margin="13,237,0,0" VerticalAlignment="Top" Width="105"/>
+                <TextBox x:Name="txtMerk" HorizontalAlignment="Left" Height="29" Margin="110,67,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="226"/>
+                <TextBox x:Name="txtSerie" HorizontalAlignment="Left" Height="29" Margin="110,101,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="226"/>
+                <TextBox x:Name="txtKleur" HorizontalAlignment="Left" Height="29" Margin="110,135,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="226"/>
+                <TextBox x:Name="txtKW" HorizontalAlignment="Left" Height="29" Margin="110,169,0,0" HorizontalContentAlignment="Right" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="65"/>
+                <DatePicker x:Name="dtpInDienst" HorizontalAlignment="Left" Height="30" Margin="110,237,0,0" VerticalAlignment="Top" Width="226"/>
+                <Label Content="Nummerplaat : " HorizontalAlignment="Left" Height="29" Margin="12,203,0,0" VerticalAlignment="Top" Width="106"/>
+                <TextBox x:Name="txtNummerplaat" HorizontalAlignment="Left" Height="29" Margin="110,203,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="226"/>
+                <Label x:Name="lblErrors" Background="LightPink" Foreground="White" Content="" HorizontalAlignment="Left" Height="100" Margin="17,281,0,0" VerticalAlignment="Top" Width="434"/>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>
